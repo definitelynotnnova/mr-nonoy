@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="What the Mr. Nonoy Discord bot stores, why, for how long, and how to have it deleted.">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}</style>
+<title>Mr. Nonoy Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: one reading column, a sticky contents strip on wide screens, data tables for what is kept and for how long */
+:root {
+  --bg: #f6f8f3;
+  --surface: #ffffff;
+  --fg: #1d2a1f;
+  --muted: #56645a;
+  --line: #d9e0d5;
+  --accent: #2f7a45;
+  --accent-soft: #e3f0e5;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121813; --surface: #1a221b; --fg: #e4ebe2; --muted: #9fb0a3; --line: #2c382e; --accent: #6cc285; --accent-soft: #1f3324;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121813; --surface: #1a221b; --fg: #e4ebe2; --muted: #9fb0a3; --line: #2c382e; --accent: #6cc285; --accent-soft: #1f3324;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 17px; line-height: 1.65; }
+.page { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 72px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; }
+header.top { grid-column: 1 / -1; display: grid; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 28px; }
+.eyebrow { font-family: var(--font-mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(32px, 5vw, 46px); line-height: 1.1; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); max-width: 62ch; margin: 0; }
+.meta { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; display: grid; gap: 6px; font-size: 15px; }
+nav.toc a { color: var(--muted); text-decoration: none; padding: 2px 0; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+main { min-width: 0; display: grid; gap: 44px; }
+section { display: grid; gap: 12px; }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: 25px; line-height: 1.25; margin: 0; text-wrap: balance; scroll-margin-top: 24px; }
+p, ul { margin: 0; max-width: 66ch; }
+ul { padding-left: 1.2em; display: grid; gap: 6px; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+.note { background: var(--accent-soft); border-radius: 8px; padding: 14px 18px; max-width: 66ch; }
+.contact { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.email { font-family: var(--font-mono); font-size: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; user-select: all; }
+button.copy { font: inherit; font-size: 15px; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+footer { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 20px; color: var(--muted); font-size: 14px; }
+@media (max-width: 820px) {
+  .page { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 32px 56px; padding-inline: 16px; }
+  nav.toc { position: static; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="top">
+    <span class="eyebrow">Bahay Kubo Garden · Discord bot</span>
+    <h1>Mr. Nonoy Privacy Policy</h1>
+    <p class="lede">Mr. Nonoy is the community bot for the Roblox game Bahay Kubo Garden and its Discord server. This page explains what the bot stores about you, why, for how long, and how to have it deleted.</p>
+    <span class="meta">Last updated: 4 October 2026</span>
+  </header>
+
+  <nav class="toc" aria-label="Contents">
+    <a href="#collect">What we store</a>
+    <a href="#messages">Message content</a>
+    <a href="#why">Why we use it</a>
+    <a href="#share">Who we share it with</a>
+    <a href="#security">How it is protected</a>
+    <a href="#retention">How long we keep it</a>
+    <a href="#rights">Your choices</a>
+    <a href="#children">Younger users</a>
+    <a href="#changes">Changes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="collect">
+      <h2>What we store</h2>
+      <p>The bot only stores what its features need. It never stores the text of your messages.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>What is stored</th></tr></thead>
+          <tbody>
+            <tr><td>Levels</td><td>Your Discord user ID, your XP total, the time of your last message that earned XP, and whether you used <code>/level optout</code>.</td></tr>
+            <tr><td>Support tickets</td><td>Ticket number, channel ID, your Discord user ID, the staff member handling it, timestamps, and the Roblox username or ID you type into the ticket form. Ticket messages and attachments stay in Discord.</td></tr>
+            <tr><td>Account links</td><td>A cache that links a Discord user ID to a Roblox user ID, looked up through Bloxlink when staff need it.</td></tr>
+            <tr><td>Game moderation</td><td>Records from the game's anti-cheat: Roblox user ID, username, account age, the server you played on and what was detected. Staff notes and actions on those records include the staff member's Discord user ID.</td></tr>
+            <tr><td>Server settings</td><td>Channel and role IDs that the server admins configure. These are not personal data.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="messages">
+      <h2>Message content</h2>
+      <p>In the channels the admins enable for XP, the bot reads a new message's text for a moment to decide whether it should earn XP. It strips mentions, emojis and links, checks that enough real text is left, and compares a short fingerprint with your previous message so repeated spam does not count.</p>
+      <ul>
+        <li>The text is processed in memory and discarded. It is never written to disk, logged or shared.</li>
+        <li>The fingerprint of your previous message lives only in memory and is lost when the bot restarts.</li>
+        <li>You can stop this at any time with <code>/level optout</code>. The bot then ignores your messages before reading any text. <code>/level optin</code> turns it back on.</li>
+        <li>Message content is never used to train machine learning or AI models.</li>
+      </ul>
+    </section>
+
+    <section id="why">
+      <h2>Why we use it</h2>
+      <ul>
+        <li>To greet new members and give back earned level roles when someone rejoins.</li>
+        <li>To run the level system and its leaderboard.</li>
+        <li>To run support tickets for ban appeals, player reports and help.</li>
+        <li>To let staff moderate cheating in the game and in the Discord server.</li>
+      </ul>
+      <p>We do not sell your data, use it for advertising, or build profiles for any purpose other than moderation of our own game and server.</p>
+    </section>
+
+    <section id="share">
+      <h2>Who we share it with</h2>
+      <ul>
+        <li><strong>Discord</strong>, which runs the platform the bot works on.</li>
+        <li><strong>Roblox</strong>, through its Open Cloud API, to read game data and apply or lift game bans.</li>
+        <li><strong>Bloxlink</strong>, which receives a Discord or Roblox user ID when staff look up a linked account.</li>
+      </ul>
+      <p>Within the server, only staff can see moderation details. Nobody else receives your data.</p>
+    </section>
+
+    <section id="security">
+      <h2>How it is protected</h2>
+      <ul>
+        <li>All data the bot stores on disk is encrypted at rest with AES-256-GCM. The key is kept apart from the data.</li>
+        <li>The bot runs on a private server that is only reachable over SSH with key authentication, behind a firewall.</li>
+        <li>Daily backups are encrypted in the same way.</li>
+      </ul>
+    </section>
+
+    <section id="retention">
+      <h2>How long we keep it</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Data</th><th>Kept for</th></tr></thead>
+          <tbody>
+            <tr><td>Level data</td><td>While you take part in the level system, or until you ask for deletion.</td></tr>
+            <tr><td>Ticket records</td><td>Until the ticket channel is deleted.</td></tr>
+            <tr><td>Account link cache</td><td>Refreshed after 7 days, and deleted on request.</td></tr>
+            <tr><td>Anti-cheat case history</td><td>60 days. Records tied to an active game ban are kept until the ban or its appeal is resolved.</td></tr>
+            <tr><td>Backups</td><td>14 days, then deleted automatically.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="rights">
+      <h2>Your choices</h2>
+      <ul>
+        <li>Stop the bot from reading your messages with <code>/level optout</code>.</li>
+        <li>Ask what we store about you, or ask us to delete it, by opening a support ticket in our Discord server or by email. We handle requests within 7 days.</li>
+        <li>Appeal a game ban through a support ticket.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2>Younger users</h2>
+      <p>Discord requires users to be at least 13, or older where local law says so. The bot does not ask for your age, real name, email or location, and stores nothing beyond what is listed above.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes</h2>
+      <p>If this policy changes, we update this page and the date at the top, and announce important changes in our Discord server.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For privacy questions or deletion requests, open a support ticket in the Bahay Kubo Garden Discord server or email:</p>
+      <div class="contact">
+        <span class="email" id="email">xenotexturas@proton.me</span>
+        <button class="copy" id="copy" type="button">Copy address</button>
+      </div>
+      <p class="note">Mr. Nonoy is an independent community bot. It is not made by or affiliated with Discord, Roblox or Bloxlink.</p>
+    </section>
+  </main>
+
+  <footer>Mr. Nonoy · Bahay Kubo Garden</footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var button = this;
+  var text = document.getElementById('email').textContent;
+  var done = function () { button.textContent = 'Copied'; setTimeout(function () { button.textContent = 'Copy address'; }, 1800); };
+  try {
+    navigator.clipboard.writeText(text).then(done, function () {
+      var range = document.createRange();
+      range.selectNodeContents(document.getElementById('email'));
+      var selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      button.textContent = 'Press Ctrl+C';
+    });
+  } catch (err) {
+    button.textContent = 'Select and copy';
+  }
+});
+</script>
+
+</body>
+</html>
